@@ -1,24 +1,38 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Static from '../views/static.vue'
+import Relative from '../views/relative.vue'
+import Absolute from '../views/absolute.vue'
+import Fixed from '../views/fixed.vue'
+import Sticky from '../views/sticky.vue'
 
 Vue.use(VueRouter)
 
   const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'static',
+    component: Static
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: function () {
-      return import(/* webpackChunkName: "about" */ '../views/About.vue')
-    }
+    path: '/relative',
+    name: 'Relative',
+    component: Relative
+  },
+  {
+    path: '/absolute',
+    name: 'Absolute',
+    component: Absolute
+  },
+  {
+    path: '/fixed',
+    name: 'Fixed',
+    component: Fixed
+  },
+  {
+    path: '/sticky',
+    name: 'Sticky',
+    component: Sticky
   }
 ]
 
